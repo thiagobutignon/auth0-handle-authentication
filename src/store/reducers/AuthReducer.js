@@ -10,12 +10,12 @@ export const AuthReducer = (state = initialState, action) => {
     case ActionTypes.LOGIN_SUCCESS:
       return {
         ...state,
-        is_authenticated: true
+        isAuthenticated: true
       };
     case ActionTypes.LOGIN_FAILURE:
       return {
         ...state,
-        is_authenticated: false
+        isAuthenticated: false
       };
     case ActionTypes.ADD_PROFILE:
       return {
