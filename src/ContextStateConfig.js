@@ -48,6 +48,24 @@ const ContextState = () => {
   const handleRemoveProfile = () => {
     dispatchAuthReducer(Actions.removeProfile());
   };
+
+  /*
+  Form Reducer
+  */
+  const [stateFormReducer, dispatchFormReducer] = useReducer(
+    FormReducer.FormReducer,
+    FormReducer.initialState
+  );
+
+  const handleFormChange = event => {
+    dispatchFormReducer(Actions.userInputChange(event.target.value));
+  };
+
+  const handleFormSubmit = event => {
+    event.preventDefault();
+    event.persist();
+    dispatchFormReducer(Actions.userInputSubmit(event.target.useContext.value));
+  };
 };
 
 export default ContextState;
