@@ -1,68 +1,33 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## React Hooks componentes funcionais
 
-## Available Scripts
+**Callback.js** Será utilizado como componente que irá redirecionar o usuário após o Auth0 autenticar o usuário
 
-In the project directory, you can run:
+**Header.js** Contém os links para os componentes de login a e logout baseado no estado de autenticação do usuário
 
-### `yarn start`
+**Home.js** Simplesmente mostra o texto da Home do aplicativo
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+**Hook1.js** Contém três maneiras de atualizar o estado do React Hooks. `useState`, `useReducer` e `useContext`. Utilizar essas três formas de atualizar o estado auxilia na compreensão das diferenças de cada um dos estados.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+**HooksForm1.js** Possue um formulário que irá atualizar o estado de três maneiras: `useState`, `useReducer`, `useContext`
 
-### `yarn test`
+**PrivateComponent.js** Componente somente acessível para usuários logados.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Profile.js** Um dashboard de usuário que irá mostrar os seus dados.
 
-### `yarn build`
+## Arquivos de Reducers e Actions
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**ActionTypes.js** Irá segurar todas as string action types e suas variavéis. Isso facilita a modificação dos arquivos para todos os tipos de ações ao invés de você ter que buscar cada tipo de ação que você utilizou no seu código
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+**Actions.js** Irá carregar as ações atuais que serão utilizadas no reducer para atualizar os estados.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**AuthReducer.js** Irá segurar todas as ações de leitura e atualização das propriedades dos estados relacionados a autenticação do usuário
 
-### `yarn eject`
+**FormReducer.js** Irá segurar o reducer para ler e atualizar o estado das propriedades relacionadas ao formulário
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**PlainReducer.js** Irá servir como boilerplate do reducer.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Arquivos Utility
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Esses arquivos nos ajudam a configurar o nosso app.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+**Context.js** Responsável por segurar o objeto de Context e será importado para cada um dos nossos componentes que utilizarem o `useContext()` hook
