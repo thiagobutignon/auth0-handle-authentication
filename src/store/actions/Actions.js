@@ -20,37 +20,37 @@ export const failure = () => {
   };
 };
 
-export const login_success = () => {
+export const loginSuccess = () => {
   return {
     type: ActionTypes.LOGIN_SUCCESS
   };
 };
 
-export const login_failure = () => {
+export const loginFailure = () => {
   return {
     type: ActionTypes.LOGIN_FAILURE
   };
 };
 
-export const add_profile = profile => {
+export const addProfile = profile => {
   return {
     type: ActionTypes.ADD_PROFILE
   };
 };
 
-export const remove_profile = () => {
+export const removeProfile = () => {
   return {
     type: ActionTypes.REMOVE_PROFILE
   };
 };
 
-export const user_input_change = text => {
+export const userInputChange = text => {
   return {
     type: ActionTypes.USER_INPUT_CHANGE
   };
 };
 
-export const user_input_submit = () => {
+export const userInputSubmit = () => {
   return {
     type: ActionTypes.USER_INPUT_SUBMIT
   };

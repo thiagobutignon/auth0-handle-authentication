@@ -24,6 +24,30 @@ const ContextState = () => {
   const handleDispatchFalse = () => {
     dispatchReducer1(Actions.failure);
   };
+
+  /*
+  Auth Reducer
+  */
+  const [stateAuthReducer, dispatchAuthReducer] = useReducer(
+    AuthReducer.AuthReducer,
+    AuthReducer.initialState
+  );
+
+  const handleLogin = () => {
+    dispatchAuthReducer(Actions.loginSuccess);
+  };
+
+  const handleLogout = () => {
+    dispatchAuthReducer(Actions.loginFailure);
+  };
+
+  const handleAddProfile = profile => {
+    dispatchAuthReducer(Actions.addProfile(profile));
+  };
+
+  const handleRemoveProfile = () => {
+    dispatchAuthReducer(Actions.removeProfile());
+  };
 };
 
 export default ContextState;
