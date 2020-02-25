@@ -1,7 +1,7 @@
 import * as ActionTypes from "../actions/ActionTypes";
 
 export const initialState = {
-  is_authenticated: false,
+  isAuthenticated: false,
   profile: null
 };
 
